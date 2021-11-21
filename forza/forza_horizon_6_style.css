@@ -1,0 +1,67 @@
+html{
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    
+}
+body{
+    font-family:Calibri;
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    display: flex;
+
+}
+
+.grass_left, .route, .grass_right{
+    margin:0px;
+    height: 100%;
+}
+.grass_left, .grass_right{
+    background-color: green;
+    width : 700px;
+    
+    background-image: url(herbe.jpg );
+}
+.route{
+    background-image: url("full_img.png");
+    background-repeat: repeat;width : 100%;
+    background-size: 100% 100%;
+
+}
+/* #main_car{
+    position:absolute;
+    top: 90%;
+    left : 60%;
+} */
+
+.main_car{
+    background-image: url("car_main_1.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main_car_broken{
+    background-image: url("car_main_1_broken.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.car{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid red;
+}
+.tableau_style{
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0px auto;
+    border-collapse:collapse;
+}
+td{
+    text-align: center;
+    border: 1px solid green
+}

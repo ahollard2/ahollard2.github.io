@@ -1,0 +1,58 @@
+html{
+    background-image: url("infinity_gx.png");
+    background-size: 100% 100%;
+    height: 100%;
+    font-family:Calibri;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+h1{
+    color: #fff;
+    font-size: 50px;
+
+    font-style: italic;
+    font-family:Impact;
+    text-align:center;
+}
+section{
+    background-color: #282c34;
+    width: 800px;
+    height: auto;
+    font-size: 25px;
+    border: none;
+    border-radius:8px;
+    padding: 10px 25px;
+    color: #fff;
+    margin:auto;
+}
+img{
+    
+    width: 100px;
+    height: auto;
+    
+
+}
+aside a{
+    display:block;
+    width: 100%;
+    margin:auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+aside{
+    background-color: blanchedalmond;
+    width :500px;
+    border: none;
+    border-radius:8px;
+    margin:auto;
+    margin-top: 200px;
+    
+}
+aside:hover{
+    background-color:cadetblue;
+}

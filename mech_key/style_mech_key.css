@@ -1,0 +1,467 @@
+
+*{
+    font-family:Calibri;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.front
+{
+    text-align:center;
+    font-family:"Brush Script MT", "Raleway", sans-serif;
+    font-weight: bold;
+    
+    font-size: 35px;
+    font-style: italic;
+    width:700px;
+    -webkit-user-select: none;
+    position: relative;
+    line-height: 75px;
+    text-align: center;
+    height: 75px;
+    color:rgb(255, 255, 255);
+    
+    
+   
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    
+    border-radius: 10px;
+    transition: 0.2s ease tranform ;
+    will-change: transform;
+    transform: translate(-8px, -8px);
+    box-shadow: 
+    12px 12px 8px 0 rgba(255, 255, 255, 0.3) inset, /** "inset" met l'ombre dans la div (au dessus du background mais en dessous du texte)**/
+    -8px -8px 6px 0 rgba(0, 0, 0, .25) inset;
+    
+}
+.front:active{ 
+    transform: translate(-4px, -4px);
+}
+.pushable {
+    background:rgb(255, 161, 138);
+    border-radius: 12px;
+    border:none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 700px;
+    margin: auto;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+.pushable::before{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 195px;
+    content : "";
+    width :0%;
+    transition: 0.4s ease-in-out width;
+    background: url("mechkey2.png") center;
+}
+.pushable:active::before{
+    width :100%;
+    /* par contre je n'ai pas reussi a mettre le pushable:before en dessous du pushable 
+    ,meme avec 'z-index:-1;'  (car dans ce cas le before se retrouve en dessous du header)
+    pourriez me dire comment on le fait ? **/
+}
+
+#loading
+{
+    color: rgb(101, 0, 126);
+    font-size: 25px;
+    text-align:center;
+    display:block; 
+    position: absolute;
+    padding: 2px;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    right: 35%; 
+    left: 35%;
+    top: 150%;
+    transition:0.4s ease all;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    will-change: transform;/**enleve les effets "bizarre" a cause du rendu par le gpu sur le texte**/
+    box-shadow: 
+    12px 12px 9px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 9px 0 rgba(255, 255, 255, 0.3);
+}
+#loading:hover{
+    background-color: rgb(51, 51, 51);
+    font-weight: bolder;
+    cursor: pointer;
+    transform: scale(1.4);
+}
+#loading:active{
+    background: rgba(99,26,152,1);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 17%, rgba(0,212,255,1) 98%, rgba(0,212,255,1) 98%);
+    color :rgba(2,15,52,1);
+}
+
+#conteneur1 h2,#texte-long h2 {
+    color: #1C1549;
+    text-align: center;
+}
+
+.citation{
+    color :rgb(102, 102, 102); 
+    font-style: italic;
+    text-indent: 20px; 
+}
+.small-button{/**boutton present dans la page index en dessous du texte principal**/
+    background-color :#1C1549;
+    border-radius: 5px;
+    border:none;
+    color: #fff;
+    padding: 4px 20px;
+    margin: 5px 20px;
+    font-family: Helvetica;
+    font-size: 20px;
+    transition: 0.3s ease background-color;
+}
+.small-button:hover{
+    background-color :#62c2c2;
+
+}
+.small-button:active{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.ligne-button{
+    display:flex;
+    justify-content: space-around;
+    padding: 5px 2px;
+}
+.important{/** balise span pour le texte **/
+    font-size : 23px;
+    color :black;
+    font-weight:800;
+}
+.attention{/** balise span pour le texte **/
+    font-style: italic;
+    color:rgb(178, 0, 248);
+    font-weight: bold;
+    
+
+}
+/** !!! 
+conteneur 5,6 et 7 ==> page atelier (avec 5:  texte principal, 6: image a droite et 7(inclus dans le #texte-long): images avec legendes
+conteneur1: txt principal  dans la page index, conteneur 2,3 et 4: images de clavier+txt **/
+#conteneur1, #conteneur5,#conteneur6{
+    padding:5px 0px;
+    color:rgb(53, 53, 53);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#conteneur1{
+    height : 400px;
+    width: 450px;
+    text-align: left;
+}
+#conteneur5{
+    height : auto;
+    width: 600px;
+    text-align: left;
+}
+#conteneur5 h2{
+    text-align: center;
+    color:black;
+    font-style: italic;
+    font-family:"Brush Script MT", "Raleway", sans-serif;
+    text-decoration: underline;
+    background: -webkit-linear-gradient(rgb(204, 0, 255), rgb(0, 174, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#conteneur6{
+    height : auto;
+    width :350px;
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#conteneur6 img{
+    border-radius:4px; 
+    width :auto;  
+    height: 250px;
+    
+}
+#cont56{/** utilisée afin de mettre un effet d'ombre bleu**/
+    padding: 10px 50px;
+    display:flex;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 255, .2);
+    border-radius:4px;
+}
+/** conteneur 7 est une classe !**/
+.conteneur7{/** (image+legende)  page atelier dans #texte-long **/
+    color: rgb(51, 51, 51);
+    font-style: italic;
+    font-size: 23px;
+    text-indent: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.conteneur7 img{
+    border-radius:4px; 
+    width :auto;  
+    height: 250px;
+}
+
+#texte-long{
+    font-size : 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    line-height:35px;
+    
+}
+#conteneur2, #conteneur3, #conteneur4{
+    width: 300px;
+    height : 400px;
+    margin: 25px;
+    padding:5px 50px;
+    border : none;
+    color:rgb(203, 247, 255);
+    
+    font-weight: 400;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    box-shadow: 
+    12px 12px 9px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 9px 0 rgba(255, 255, 255, 0.3);
+    border-radius:8px;
+    
+
+}
+#conteneur2{
+    background-color: #121212;
+}
+#conteneur3{
+    background-color: #363636;
+
+}
+#conteneur4{
+    background-color: #262626;
+}
+.prix{
+    font-weight: 700;
+    font-size: 23px;
+    color :rgb(40 213 255);
+}
+
+h3{
+    font-size:19px;
+}
+section img{
+    width: 250px;
+    height: 250px;
+    margin: 10px
+}
+
+
+
+section
+{
+    border: none;
+    background: rgb(250,182,203);
+    background: linear-gradient(86deg, rgba(250,182,203,1) 0%, rgba(152,218,240,1) 100%);
+    padding:30px 25px; 
+    margin-bottom: 100px;
+    height: auto;
+    border-radius: 14px;
+    width:    auto;
+    box-shadow: 
+    16px 16px 9px 0 rgba(0, 0, 0, 0.25),
+    -12px -12px 6px 0 rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+}
+
+.adresse{
+    background-image: url("fond-adresse.jpg");
+    border-radius: 10px;
+    border: none;
+    padding : 50px 50px;
+    background-size: 100% 100%;
+    color :rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight:bold;
+}
+.panneaux-liens li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 25px 10px; 
+    
+    background-image: url("switch2.png");
+    background-size: 100% auto;
+    background-position:center;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 200px;
+   
+    font-size: 30px;
+    font-weight: bolder; 
+    color:#fff;
+
+    border-radius: 10px;
+    border:none;
+    box-shadow: 8px 8px 7px rgb(47, 50, 110), -4px -4px 3px 0 rgb(254, 1, 38);
+    will-change: transform;
+    transition: 0.3s cubic-bezier(0.63, 0.02, 0.18, 1.09) all;
+}
+
+.panneaux-liens a:hover{
+    transform: scale(1.1);
+    background-size: 120% auto;
+}
+
+
+html, body {
+    margin: 0;
+}
+aside,main,header, footer
+{
+    margin: 0;
+    padding:1%;
+
+}
+header{
+    padding: 60px 0px;
+    
+    background-image: url("gradient1.jpg");
+    background-size: auto 300px;
+    background-color :#1C1549;
+    background-repeat:no-repeat ;
+    background-position: center;
+}
+
+
+
+main{
+    left :0%;
+    top : 10%;
+    background-image: url("wood2.jpg");
+    display: flex;
+}
+
+
+
+
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    
+    color: white;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 20px;
+    background-color: #1C1549;
+    background-image:url("keycaps1.png"),url("keycaps2.png") ;
+    background-size: 80px 80px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-position: 630px 150px, 970px 150px;
+}
+
+.aboutme{
+    
+    color :black;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: bolder;
+    font-style: italic;
+}
+.aboutme:hover{
+    background-color: #00C8CF;
+    background: linear-gradient(to right, #00C8CF 0%, #0000FF 19%, #F700FF 44%, #FF00D4 68%, #CC00FF 92%, #5706CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#col1{
+    background-image: url("fond-aboutme.png");
+    background-size: 100% 100%;
+    border:none;
+    padding:40px 80px;
+
+    box-shadow: 
+    12px 12px 9px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 9px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+#col2, #col3{
+    margin:0;
+    padding: 0;
+    
+    font-size: 20px;
+    font-weight: 500;
+    
+    padding-left: 20px;
+    border-radius: 5px;
+}
+#col2{
+    border-left: 5px solid #95cde3;
+}
+#col3{
+    border-left: 5px solid #7c7172;
+}
+
+#col2 a{
+    color:#95cde3;
+    font-weight: bold;
+    display: block;
+}
+#col2 ul, #col3 ul{
+    text-align: left;
+    margin:0;
+    padding: 0;
+}
+
+#col2 a::after{
+    content:url('link2.png');
+    margin-left :5px;
+    
+}
+#col2 a:hover{
+    text-decoration-line:underline;
+}
+#col3 ul{
+    text-align:center;
+    color :gray;
+}
+#col3 h4{
+    margin-top: 15px;
+}
