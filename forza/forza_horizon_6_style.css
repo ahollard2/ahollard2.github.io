@@ -177,9 +177,21 @@ li img{
 .main_car_broken_2{
     background-image: url("car_main_1_broken.png");
 }
-.car{
+/* .car{
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid red;
+} */
+.car_un{
+    background-image: url("car_1.png");
+}
+.car_deux{
+    background-image: url("car_2.png");
+}
+.car_trois{
+    background-image: url("car_3.png");
+}
+.car_quatre{
+    background-image: url("car_4.png");
 }
