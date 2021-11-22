@@ -3,7 +3,9 @@ html{
     width:100%;
     margin:0px;
     padding:0px;
-    
+}
+ul{
+    padding: 0;
 }
 body{
     font-family:Calibri;
@@ -12,9 +14,7 @@ body{
     margin:0px;
     padding:0px;
     display: flex;
-
 }
-
 .grass_left, .route, .grass_right{
     margin:0px;
     height: 100%;
@@ -22,7 +22,6 @@ body{
 .grass_left, .grass_right{
     background-color: green;
     width : 700px;
-    
     background-image: url(herbe.jpg );
 }
 .route{
@@ -37,24 +36,7 @@ body{
     left : 60%;
 } */
 
-.main_car{
-    background-image: url("car_main_1.png");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.main_car_broken{
-    background-image: url("car_main_1_broken.png");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.car{
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid red;
-}
+
 .tableau_style{
     min-width: 100%;
     min-height: 100vh;
@@ -64,4 +46,140 @@ body{
 td{
     text-align: center;
     border: 1px solid green
+}
+#menu{
+    visibility:visible;
+    display: block;
+    position:absolute;
+    top : 50%;
+    left : 50%;
+
+    background-image: url(menu_background0.jpg);
+    background-size: 100% 100%;;
+    border-radius: 10px;
+    
+    padding: 40px 100px;
+    padding-bottom: 10px;
+    background-color: purple;
+    color: white;
+    transform : translate(-50%, -50%);
+    font-style: italic;
+}
+
+li{
+    text-align: -webkit-match-parent;
+    box-shadow: -1px 0px 16px 3px rgb(0 0 0 / 63%);
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    height: 50px;
+    margin: 20px 0;
+    width: 600px;
+    border-radius: 5px;
+    background: rgb(49,78,255);
+    transition:0.1s ease all;
+    background: linear-gradient(90deg, rgba(49,78,255,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h1{
+   
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 50px;
+    text-transform: uppercase;
+	background: linear-gradient(to right, rgba(49,78,255,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#select_car{
+    display:flex;
+}
+h3 {
+    font-size: 25px;
+    font-weight: bold;
+    height : 30px;
+    margin: auto 0;
+    margin-left: 37px;
+}
+li button{
+    background-color: #1C1549;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    margin: 0px 70px;
+    transition: 0.3s ease background-color;
+    transition: 0.1s ease-in transform;
+}
+li button:hover{
+    transform: scale(1.1);
+}
+.selected_car{
+    background-color: #52a6df;
+}
+li img{
+    width: auto;
+    height: 40px;
+}
+
+
+
+#play_btn{
+    background-image: url("car_drfit.jpg");
+    background-size: 124% auto;
+    background-position: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-indent: 40px;
+    transition: 0.3s cubic-bezier(0.69, 0.07, 0.38, 1.34) all;
+    
+
+}
+#play_btn:hover{
+    /* transform:translateX(15px); */
+    background-size: 150% auto;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 28px 4px rgb(0 0 0 / 90%);
+}
+#play_btn:active{
+    /* transform: translateX(150px); */
+    transform: scale(1.7);
+    opacity: 0.3;
+    
+}
+
+#explication{
+    background:rgba(37, 37, 37, 0.664);
+    height: 100px;
+}
+#explication h2{
+    margin: 5px 0px;
+}
+#explication p{
+    margin: 5px 0px;
+}
+
+.main_car_1, .main_car_2, .main_car_broken_1, .main_car_broken_2{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main_car_1{
+    background-image: url("car_main_1.png");
+}
+.main_car_broken_1{
+    background-image: url("car_main_1_broken.png");
+}
+.main_car_2{
+    background-image: url("car_main_2.png");
+}
+.main_car_broken_2{
+    background-image: url("car_main_1_broken.png");
+}
+.car{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid red;
 }
