@@ -160,7 +160,7 @@ li img{
     margin: 5px 0px;
 }
 
-.main_car_1, .main_car_2, .main_car_broken_1, .main_car_broken_2{
+.main_car_1, .main_car_2, .main_car_broken_1, .main_car_broken_2, .car_un,.car_deux,.car_trois,.car_quatre{
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
